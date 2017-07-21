@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { GeocacheCoordinates } from '../geocacheCoordinates.model';
+import { Geocache } from '../geocache.model';
 
 @Component({
   selector: 'app-geocache-list',

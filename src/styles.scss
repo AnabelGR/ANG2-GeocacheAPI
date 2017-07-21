@@ -7,6 +7,7 @@ $black: #000;
 $red: #F00;
 $primary: #B2FFE9;
 $secondary: #333;
+$sizing: 16px;
 
 * {
   font-family: $pathway-sans;
@@ -25,8 +26,24 @@ $secondary: #333;
   padding-right: 50px;
 }
 
-a { color: $white;
+a {
+  color: $white;
   &:hover,
   &:focus,
   &:visited {color: $primary;}
 }
+
+input {
+  font-size: $sizing;
+  width: 200px;
+  padding-left: 10px;
+  margin-left: 5px;
+}
+
+p {
+  font-size: $sizing;
+}
+ button {
+   margin: 10px;
+   font-size: $sizing;
+ }

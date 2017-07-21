@@ -24,11 +24,11 @@ export class GeocacheFormComponent{
       })
     }
 
-    getLocationByAddress(streetNumber:string, route: string, locality: string, admnArea: string) {
-      this.geocacheApi.getByAddress(streetNumber, route, locality, admnArea).subscribe(response => {
-        this.locations = response.json().results[0].geometry.location;
-        console.log(response.json().results[0].geometry.location.lat)
-        console.log(response.json().results[0].geometry.location.lng)
-      })
-    }
+  getLocationByAddress(streetNumber: string, route: string, locality: string, admnArea: string) {
+    this.geocacheApi.getByAddress(streetNumber, route, locality, admnArea).subscribe(response => {
+      this.locations = response.json().results[0].geometry.location;
+      console.log(response.json().results[0].geometry.location.lat)
+      console.log(response.json().results[0].geometry.location.lng)
+    })
+  }
 }

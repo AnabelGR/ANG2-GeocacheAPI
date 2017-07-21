@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Geocache } from '../geocache.model';
+
 
 @Component({
   selector: 'app-geocache-address-list',

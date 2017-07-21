@@ -10,11 +10,11 @@ const appRoutes: Routes = [
       component: GeocacheFormComponent
     },
     {
-      path: 'geocache/locations',
+      path: 'locations',
       component: GeocacheListComponent
     },
     {
-      path: 'geocache/address',
+      path: 'addresses',
       component: GeocacheAddressListComponent
     },
 
