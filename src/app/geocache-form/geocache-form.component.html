@@ -1,0 +1,20 @@
+<h1>Geocaches</h1>
+<form>
+  <div class="form-group">
+    <label for="lat">Latitude</label>
+    <input type=lat #geocacheLat>
+  </div>
+  <div class="form-group">
+    <label for="lng">Longitude</label>
+    <input type=lng #geocacheLng>
+  </div>
+  <button (click)="getGeocacheInfo(geocacheLng.value, geocacheLat.value);false">View Geocaches</button>
+  <button (click)="saveGeocacheInfo(geocacheLng.value, geocacheLat.value);false">Save All Geocaches</button>
+</form>
+
+<div *ngIf="geocaches && !noGoecaches">
+  <app-geocache-list [childGeocaches]="geocaches"></app-geocache-list>
+</div>
+<div *ngIf="noGeocaches">
+    <h3>There were no geocaches near {{geocacheLng.value}} band {{geocacheLat.value}}.</h3>
+</div>
