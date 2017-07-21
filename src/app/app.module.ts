@@ -14,6 +14,7 @@ import { GeocacheAddressListComponent } from './geocache-address-list/geocache-a
 import { AboutComponent } from './about/about.component';
 import { HowToPlayComponent } from './how-to-play/how-to-play.component';
 import { LogbookComponent } from './logbook/logbook.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 
 export const firebaseConfig = {
@@ -31,7 +32,8 @@ export const firebaseConfig = {
     GeocacheAddressListComponent,
     AboutComponent,
     HowToPlayComponent,
-    LogbookComponent
+    LogbookComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,

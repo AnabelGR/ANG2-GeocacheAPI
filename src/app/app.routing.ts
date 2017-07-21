@@ -6,6 +6,7 @@ import { GeocacheAddressListComponent } from './geocache-address-list/geocache-a
 import { AboutComponent } from './about/about.component';
 import { HowToPlayComponent } from './how-to-play/how-to-play.component';
 import { LogbookComponent } from './logbook/logbook.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 const appRoutes: Routes = [
   {
@@ -14,7 +15,7 @@ const appRoutes: Routes = [
     },
     {
       path: '',
-      component: AboutComponent
+      component: WelcomeComponent
     },
     {
       path: 'about',
