@@ -1,0 +1,18 @@
+<div class="panel panel-default">
+    <div class="panel-heading" id="heading">
+      <h3>{{(clubToDisplay | async)?.clubName}}</h3>
+    </div>
+    <div class="panel-body" id="detail">
+      <img src="{{(clubToDisplay | async)?.teamLogo}}">
+      <hr>
+      <p>LEAGUE: {{(clubToDisplay | async)?.league}}</p>
+      <p>MANAGER: {{(clubToDisplay | async)?.manager}}</p>
+      <p>MANAGER PHONE: {{(clubToDisplay | async)?.managerPhone}}</p>
+      <p>MANAGER EMAIL: {{(clubToDisplay | async)?.managerEmail}}</p>
+      <p>HOME KIT COLOR: {{(clubToDisplay | async)?.teamHomeKit}}</p>
+      <p>AWAY KIT COLOR: {{(clubToDisplay | async)?.teamAwayKit}}</p>
+  </div>
+  <div class="panel-footer">
+    <p><a (click)="return()">RETURN</a></p>
+  </div>
+</div>

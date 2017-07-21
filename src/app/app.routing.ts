@@ -3,12 +3,32 @@ import { Routes, RouterModule } from '@angular/router';
 import { GeocacheListComponent } from './geocache-list/geocache-list.component';
 import { GeocacheFormComponent } from './geocache-form/geocache-form.component';
 import { GeocacheAddressListComponent } from './geocache-address-list/geocache-address-list.component';
+import { AboutComponent } from './about/about.component';
+import { HowToPlayComponent } from './how-to-play/how-to-play.component';
+import { LogbookComponent } from './logbook/logbook.component';
 
 const appRoutes: Routes = [
   {
-      path: '',
+      path: 'geocache-form',
       component: GeocacheFormComponent
     },
+    {
+      path: '',
+      component: AboutComponent
+    },
+    {
+      path: 'about',
+      component: AboutComponent
+    },
+    {
+      path: 'how-to-play',
+      component: HowToPlayComponent
+    },
+    {
+      path: 'logbook',
+      component: LogbookComponent
+    },
+
     {
       path: 'locations',
       component: GeocacheListComponent

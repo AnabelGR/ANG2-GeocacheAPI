@@ -1,9 +1,30 @@
-<div class="container">
-  <h1 class="name">{{title}}</h1>
-  <router-outlet></router-outlet>
-</div>
-<div class="container" id="footer">
-  <footer class="footer">
+<div id="pagewrap">
+    <nav>
+      <ul>
+        <li><a routerLink="">The Great Geocaching Group</a></li>
+        <li><a routerLink="about">About G.G.G.</a></li>
+        <li><a routerLink="how-to-play">How to Play</a></li>
+        <li><a routerLink="geocache-form">Hide and Seek</a></li>
+        <li><a routerLink="logbook">Logbook</a></li>
+      </ul>
+    </nav>
+
+    <section class="left-section">
+      <header id="main">
+    <h1 class="name">{{title}}</h1>
+      </header>
+        <router-outlet></router-outlet>
+    </section>
+
+    <section class="right-section">
+      <br>
+      <br>
+      <br>
+      <img src="../src/assets/images/geocach-W.png">
+      <img src="../src/assets/images/geocach-M.png">
+    </section>
+
+  <footer>
     <a routerLink=''>HOME</a>
-</footer>
+  </footer>
 </div>

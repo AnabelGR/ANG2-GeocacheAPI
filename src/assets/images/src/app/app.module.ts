@@ -8,12 +8,14 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { routing } from './app.routing';
 
 import { AppComponent } from './app.component';
-import { GeocacheListComponent } from './geocache-list/geocache-list.component';
-import { GeocacheFormComponent } from './geocache-form/geocache-form.component';
-import { GeocacheAddressListComponent } from './geocache-address-list/geocache-address-list.component';
 import { AboutComponent } from './about/about.component';
-import { HowToPlayComponent } from './how-to-play/how-to-play.component';
-import { LogbookComponent } from './logbook/logbook.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { AdminComponent } from './admin/admin.component';
+import { EditClubComponent } from './edit-club/edit-club.component';
+import { ClubsComponent } from './clubs/clubs.component';
+import { ClubDetailComponent } from './club-detail/club-detail.component';
+import { ClubSearchComponent } from './club-search/club-search.component';
+import { RosterComponent } from './roster/roster.component';
 
 
 export const firebaseConfig = {
@@ -26,12 +28,14 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    GeocacheListComponent,
-    GeocacheFormComponent,
-    GeocacheAddressListComponent,
     AboutComponent,
-    HowToPlayComponent,
-    LogbookComponent
+    WelcomeComponent,
+    AdminComponent,
+    EditClubComponent,
+    ClubsComponent,
+    ClubDetailComponent,
+    ClubSearchComponent,
+    RosterComponent
   ],
   imports: [
     BrowserModule,
