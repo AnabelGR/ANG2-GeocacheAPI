@@ -17,10 +17,10 @@ export class GeocacheFormComponent{
 
   constructor(private router: Router, private geocacheApi: GeocacheApiService) { }
 
-  saveGeocacheInfo(lng, lat){
-    this.geocacheApi.saveGeocaches(lng, lat);
-    alert('The geocache from ' + lng + ', ' + lat + ' has been saved to the database.')
-  }
+  // saveGeocacheInfo(latlng){
+  //   this.geocacheApi.saveGeocaches(latlng);
+  //   alert('The geocache from ' + latlng + ' has been saved to the database.')
+  // }
 
   getGeocacheInfo(lat: string, lng: string) {
     this.noGeocaches = false;

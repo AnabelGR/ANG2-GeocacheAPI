@@ -8,8 +8,8 @@
     <label for="lng">Longitude</label>
     <input type=lng #geocacheLng>
   </div>
-  <button (click)="getGeocacheInfo(geocacheLng.value, geocacheLat.value);false">View Geocaches</button>
-  <button (click)="saveGeocacheInfo(geocacheLng.value, geocacheLat.value);false">Save All Geocaches</button>
+  <button (click)="getGeocacheInfo(geocacheLat.value, geocacheLng.value);false">View Geocaches</button>
+  <button (click)="saveGeocacheInfo(geocacheLat.value, geocacheLng.value);false">Save All Geocaches</button>
 </form>
 
 <div *ngIf="geocaches && !noGoecaches">
