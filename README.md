@@ -1,4 +1,4 @@
-# Geocacher
+# ANG2-GeocacheAPI
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 #### An Epicodus independent project in Angular2, 07.21.17
