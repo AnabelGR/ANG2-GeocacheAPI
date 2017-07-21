@@ -42,6 +42,9 @@ Further Exploration:
 |`npm install @angular/{common,compiler,compiler-cli,core,forms,http,platform-browser,platform-browser-dynamic,platform-server,router,animations}@next --save` |
 
 - Run `$ npm install` and `$ bower install` in your terminal to gather required packages and styling dependencies.
+- You will need to request an API key from [Google Maps Geocaching API](https://developers.google.com/maps/documentation/geocoding/start).
+- In the src/app folder, create an `api-keys.ts` file.
+- Type in ' export var geoKey = "{paste in your API key here}"; ' and save the file.
 - install Firebase `npm install angularfire2@4.0.0-rc.0 firebase --save`
 - install promise-polyfill patch `npm install promise-polyfill --save-exact`
 - You will need a [Firebase API](https://firebase.google.com/) key to run this code.
@@ -57,7 +60,7 @@ Further Exploration:
     ".write": "true"
     }
     }`
-    - In the src/app folder, create a file and name it `api-keys.ts`.
+    - In the src/app folder, add this to the `api-keys.ts` file.
     - Paste the information from the pop-up window into this format:
         ```typescript
         export var masterFirebaseConfig = {
