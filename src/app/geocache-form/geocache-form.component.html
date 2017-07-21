@@ -1,20 +1,44 @@
-<h1>Geocaches</h1>
-<form>
-  <div class="form-group">
-    <label for="lat">Latitude</label>
-    <input type=lat #geocacheLat>
+<div class="container">
+  <div class="latLngForm">
+    <form>
+      <div class="form-group">
+        <label for="lat">LATITUDE</label>
+        <input type="text" #lat placeholder="45.523062">
+      </div>
+      <div class="form-group">
+        <label for="lng">LONGITUDE</label>
+        <input type="text" #lng placeholder="-122.676482">
+      </div>
+    </form>
+    <button (click)="getLocationByCoordinates(lat.value, lng.value)">FIND BY COORDINATES</button>
   </div>
-  <div class="form-group">
-    <label for="lng">Longitude</label>
-    <input type=lng #geocacheLng>
+  <div class="addressForm">
+    <form>
+    <div class="form-group">
+      <label for="streetNumber">STREET NUMBER</label>
+      <input type="text" #streetNumber placeholder="11">
+    </div>
+    <div class="form-group">
+      <label for="route">STREET ROUTE</label>
+      <input type="text" #route placeholder="NW 6th St">
+    </div>
+    <div class="form-group">
+      <label for="locality">CITY</label>
+      <input type="text" #locality placeholder="Portland">
+    </div>
+    <div class="form-group">
+      <label for="admnArea">STATE</label>
+      <input type="text" #admnArea placeholder="OR">
+    </div>
+  </form>
+  <button (click)="getLocationByAddress(streetNumber.value, route.value, locality.value, admnArea.value)">FIND BY ADDRESS</button>
   </div>
-  <button (click)="getGeocacheInfo(geocacheLat.value, geocacheLng.value);false">View Geocaches</button>
-  <button (click)="saveGeocacheInfo(geocacheLat.value, geocacheLng.value);false">Save All Geocaches</button>
-</form>
-
-<div *ngIf="geocaches && !noGoecaches">
-  <app-geocache-list [childGeocaches]="geocaches"></app-geocache-list>
 </div>
-<div *ngIf="noGeocaches">
-    <h3>There were no geocaches near {{geocacheLng.value}} band {{geocacheLat.value}}.</h3>
+<div class="results">
+  <div *ngIf="locations">
+    <app-geocache-list [childLocations] ="locations"></app-geocache-list>
+  </div>
+  <div *ngIf="address">
+    <app-geocache-address-list [childAddress] = "addresses"></app-geocache-address-list>
+  </div>
 </div>

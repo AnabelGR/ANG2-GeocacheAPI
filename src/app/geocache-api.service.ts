@@ -9,19 +9,21 @@ import { GeocacheService } from './geocache.service';
 export class GeocacheApiService {
   constructor(private http: Http, private geocacheService: GeocacheService) { }
 
-  getByLatAndLng(lat: string, lng: string) {
-    return this.http.get("https://maps.googleapis.com/maps/api/geocode/json?latlng="+lat+","+lng+"&key=" + geoKey)
+  getByLatAndLng(lat: string,lng: string) {
+    return this.http.get("https://maps.googleapis.com/maps/api/geocode/json?latlng="+lat+","+lng+"&key="+geoKey)
   }
 
-  getByAddress(address: string) {
-    return this.http.get("https://maps.googleapis.com/maps/api/geocode/json?address="+address+"&key=" + geoKey)
+
+  getByAddress(streetNumber:string, route: string, locality: string, admnArea: string) {
+    return this.http.get("https://maps.googleapis.com/maps/api/geocode/json?address="+streetNumber+",+"+route+",+"+locality+",+"+admnArea+"&key="+geoKey)
   }
 
-//   saveGeocaches(latlng: string) {
-//   return this.http.get("https://maps.googleapis.com/maps/api/geocode/json?latlng="+latlng+"&key=" + geoKey).subscribe(response => {
+
+//   saveGeocaches(address: string, lat: string, lng: string) {
+//   return this.http.get("https://maps.googleapis.com/maps/api/geocode/json?address="+address+"&key=" + geoKey).subscribe(response => {
 //     let foundGeocache: Geocache;
-//     for(let location of response.json().geocaches) {
-//       foundGeocache = new Geocache(address);
+//     for(let address of response.json().geocaches) {
+//       foundGeocache = new Geocache(address, lat, lng);
 //       this.geocacheService.addGeocache(foundGeocache);
 //     }
 //   });

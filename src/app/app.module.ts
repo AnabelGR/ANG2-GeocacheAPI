@@ -10,6 +10,7 @@ import { routing } from './app.routing';
 import { AppComponent } from './app.component';
 import { GeocacheListComponent } from './geocache-list/geocache-list.component';
 import { GeocacheFormComponent } from './geocache-form/geocache-form.component';
+import { GeocacheAddressListComponent } from './geocache-address-list/geocache-address-list.component';
 
 
 export const firebaseConfig = {
@@ -23,7 +24,8 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     GeocacheListComponent,
-    GeocacheFormComponent
+    GeocacheFormComponent,
+    GeocacheAddressListComponent
   ],
   imports: [
     BrowserModule,

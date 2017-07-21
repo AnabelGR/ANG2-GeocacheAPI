@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { GeocacheCoordinates } from '../geocacheCoordinates.model';
 
 @Component({
   selector: 'app-geocache-list',
@@ -6,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./geocache-list.component.scss']
 })
 export class GeocacheListComponent implements OnInit {
-  @Input() childGeocaches;
+  @Input() childLocations;
 
 
   constructor() { }

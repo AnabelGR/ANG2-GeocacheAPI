@@ -12,25 +12,23 @@ import { GeocacheService } from '../geocache.service';
 })
 
 export class GeocacheFormComponent{
-  geocaches: any[]=null;
-  noGeocaches: boolean=false;
+  locations: any[] = null;
+  address: string = null;
 
   constructor(private router: Router, private geocacheApi: GeocacheApiService) { }
 
-  // saveGeocacheInfo(latlng){
-  //   this.geocacheApi.saveGeocaches(latlng);
-  //   alert('The geocache from ' + latlng + ' has been saved to the database.')
-  // }
+  getLocationByCoordinates(lat: string, lng: string) {
+      this.geocacheApi.getByLatAndLng(lat, lng).subscribe(response => {
+        this.address = response.json().results[0].formatted_address;
+        console.log(response.json().results[0].formatted_address)
+      })
+    }
 
-  getGeocacheInfo(lat: string, lng: string) {
-    this.noGeocaches = false;
-    this.geocacheApi.getByLatAndLng(lat, lng).subscribe(response =>{
-      if(response.json().results.length > 0)
-      {
-        this.geocaches = response.json();
-      } else {
-        this.noGeocaches = true;
-      }
-    });
-  }
+    getLocationByAddress(streetNumber:string, route: string, locality: string, admnArea: string) {
+      this.geocacheApi.getByAddress(streetNumber, route, locality, admnArea).subscribe(response => {
+        this.locations = response.json().results[0].geometry.location;
+        console.log(response.json().results[0].geometry.location.lat)
+        console.log(response.json().results[0].geometry.location.lng)
+      })
+    }
 }
