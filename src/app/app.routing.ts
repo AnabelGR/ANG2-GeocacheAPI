@@ -1,4 +1,4 @@
-import { ModuleWithProviders }  from '@angular/core';
+import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { GeocacheListComponent } from './geocache-list/geocache-list.component';
 import { GeocacheFormComponent } from './geocache-form/geocache-form.component';

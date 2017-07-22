@@ -32,6 +32,8 @@
     </div>
   </form>
   <button (click)="getLocationByAddress(streetNumber.value, route.value, locality.value, admnArea.value)">FIND BY ADDRESS</button>
+  <button (click)="saveGeocache(lat.value, lng.value);false">SAVE GEOCACHE TO LOGBOOK</button>
+
   </div>
 </div>
 <div class="results">
